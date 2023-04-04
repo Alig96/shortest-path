@@ -14,7 +14,7 @@ import net.runelite.api.Skill;
 import net.runelite.api.coords.WorldArea;
 import net.runelite.api.coords.WorldPoint;
 import shortestpath.ShortestPathConfig;
-import shortestpath.ShortestPathPlugin;
+import shortestpath.ShortestPathPluginInterface;
 import shortestpath.Transport;
 
 public class PathfinderConfig {
@@ -27,7 +27,7 @@ public class PathfinderConfig {
     private final Map<WorldPoint, List<Transport>> transports;
     private final Client client;
     private final ShortestPathConfig config;
-    private final ShortestPathPlugin plugin;
+    private final ShortestPathPluginInterface plugin;
 
     @Getter
     private Duration calculationCutoff;
@@ -45,7 +45,7 @@ public class PathfinderConfig {
     private Map<Quest, QuestState> questStates = new HashMap<>();
 
     public PathfinderConfig(CollisionMap map, Map<WorldPoint, List<Transport>> transports, Client client,
-                            ShortestPathConfig config, ShortestPathPlugin plugin) {
+                            ShortestPathConfig config, ShortestPathPluginInterface plugin) {
         this.map = map;
         this.transports = transports;
         this.client = client;

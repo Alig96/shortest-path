@@ -55,7 +55,7 @@ import shortestpath.pathfinder.PathfinderConfig;
     description = "Draws the shortest path to a chosen destination on the map (right click a spot on the world map to use)",
     tags = {"pathfinder", "map", "waypoint", "navigation"}
 )
-public class ShortestPathPlugin extends Plugin {
+public class ShortestPathPlugin extends Plugin implements ShortestPathPluginInterface {
     protected static final String CONFIG_GROUP = "shortestpath";
     private static final String ADD_START = "Add start";
     private static final String ADD_END = "Add end";
